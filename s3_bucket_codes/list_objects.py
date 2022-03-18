@@ -13,3 +13,5 @@ response = client.list_objects_v2(
     Bucket='bkt_name', Delimiter=r'/', MaxKeys=10, Prefix='in/this/folder/')
 
 num_files = len(response['Contents'])
+# return number of object keys in the response
+num_files = response['KeyCount']
