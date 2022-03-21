@@ -1,4 +1,4 @@
-#pip3 install paramiko
+# pip3 install paramiko
 
 import paramiko
 import os
@@ -16,16 +16,17 @@ tgt_file = src_file
 # create an ssh cleint for the session
 session = paramiko.SSHClient()
 
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-ssh.connect(sftp_host, username=sftp_user, password=pass_phrase, key_filename=pkey_file_path)
+session.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+'''
+ssh.connect(sftp_host, username=sftp_user,
+            password=pass_phrase, key_filename=pkey_file_path)
 
 stdin, stdout, stderr = ssh.exec_command('ls')
 print stdout.readlines()
 ssh.close()
 '''
 
-session.load_system_host_keys()
+# session.load_system_host_keys()
 # get the key from private key file
 sftp_pkey = paramiko.RSAKey.from_private_key_file(
     filename=pkey_file_path, password=pass_phrase)
@@ -33,7 +34,7 @@ sftp_pkey = paramiko.RSAKey.from_private_key_file(
 # connect to the ssh client
 session.connect(hostname=sftp_host, port=22, pkeys=sftp_pkey,
                 allow_agent=False, look_for_keys=False)
-'''
+
 # estabalish sftp connection and upload the file to required folder
 with session.open_sftp() as ftp_client:
     ftp_client.put(localpath=os.path.join(src_dir, src_file),
