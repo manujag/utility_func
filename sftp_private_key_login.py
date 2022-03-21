@@ -18,7 +18,7 @@ session = paramiko.SSHClient()
 
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-ssh.connect('<hostname>', username='<username>', password='<password>', key_filename='<path/to/openssh-private-key-file>')
+ssh.connect(sftp_host, username=sftp_user, password=pass_phrase, key_filename=pkey_file_path)
 
 stdin, stdout, stderr = ssh.exec_command('ls')
 print stdout.readlines()
