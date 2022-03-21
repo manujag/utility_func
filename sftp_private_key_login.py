@@ -1,3 +1,5 @@
+#pip3 install paramiko
+
 import paramiko
 import os
 
