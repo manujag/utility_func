@@ -14,6 +14,15 @@ tgt_file = src_file
 # create an ssh cleint for the session
 session = paramiko.SSHClient()
 
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+ssh.connect('<hostname>', username='<username>', password='<password>', key_filename='<path/to/openssh-private-key-file>')
+
+stdin, stdout, stderr = ssh.exec_command('ls')
+print stdout.readlines()
+ssh.close()
+'''
+
 session.load_system_host_keys()
 # get the key from private key file
 sftp_pkey = paramiko.RSAKey.from_private_key_file(
@@ -22,7 +31,7 @@ sftp_pkey = paramiko.RSAKey.from_private_key_file(
 # connect to the ssh client
 session.connect(hostname=sftp_host, port=22, pkeys=sftp_pkey,
                 allow_agent=False, look_for_keys=False)
-
+'''
 # estabalish sftp connection and upload the file to required folder
 with session.open_sftp() as ftp_client:
     ftp_client.put(localpath=os.path.join(src_dir, src_file),
