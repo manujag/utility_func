@@ -1,0 +1,33 @@
+2022-03-26 10:41:17,783 - myLogger - DEBUG - debug message
+2022-03-26 10:41:17,785 - myLogger - INFO - info message
+2022-03-26 10:41:17,785 - myLogger - WARNING - warn message
+2022-03-26 10:41:17,785 - myLogger - ERROR - error message
+2022-03-26 10:41:17,785 - myLogger - CRITICAL - critical message
+2022-03-26 10:52:40,740 - myLogger - WARNING: warn message
+2022-03-26 10:52:40,741 - myLogger - ERROR: error message
+2022-03-26 10:52:40,742 - myLogger - CRITICAL: critical message
+2022-03-26 10:53:28,119 - myLogger - WARNING: warn message
+2022-03-26 10:53:28,120 - myLogger - ERROR: error message
+2022-03-26 10:53:28,120 - myLogger - CRITICAL: critical message
+2022-03-26 10:53:36,043 - myLogger - WARNING : warn message
+2022-03-26 10:53:36,044 - myLogger - ERROR : error message
+2022-03-26 10:53:36,044 - myLogger - CRITICAL : critical message
+2022-03-26 10:55:33,981 - myLogger - WARNING - warn message
+2022-03-26 10:55:33,981 - myLogger - ERROR - error message
+2022-03-26 10:55:33,981 - myLogger - CRITICAL - critical message
+2022-03-26 10:59:55,625 - myLogger - WARNING - warn message
+2022-03-26 10:59:55,625 - myLogger - ERROR - error message
+2022-03-26 10:59:55,626 - myLogger - CRITICAL - critical message
+2022-03-26 11:00:50,500 - myLogger - WARNING - warn message
+2022-03-26 11:00:50,500 - myLogger - ERROR - error message
+2022-03-26 11:00:50,500 - myLogger - CRITICAL - critical message
+2022-03-26 11:01:22,771 - myLogger - WARNING - warn message
+2022-03-26 11:01:22,771 - myLogger - ERROR - error message
+2022-03-26 11:01:22,771 - myLogger - CRITICAL - critical message
+2022-03-26 11:09:59,855 - myLogger - DEBUG - debug message
+2022-03-26 11:09:59,855 - myLogger - INFO - info message
+2022-03-26 11:10:13,543 - myLogger - DEBUG - debug message
+2022-03-26 11:10:13,545 - myLogger - INFO - info message
+2022-03-26 11:10:13,545 - myLogger - WARNING - warn message
+2022-03-26 11:10:13,546 - myLogger - ERROR - error message
+2022-03-26 11:10:13,546 - myLogger - CRITICAL - critical message
