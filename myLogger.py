@@ -11,13 +11,13 @@ logger.setLevel(level=logging.DEBUG)
 
 # create console handler and set level to debug
 ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
+ch.setLevel(level=logging.DEBUG)
 
 
 # create file handler and set level to debug
 fh = logging.FileHandler(
     filename='/home/manu/git_repos/utility_func/example.log')
-fh.setLevel(logging.DEBUG)
+fh.setLevel(level=logging.DEBUG)
 
 # create formatter
 formatter = logging.Formatter(
@@ -25,12 +25,12 @@ formatter = logging.Formatter(
 
 
 # add formatter to ch
-ch.setFormatter(formatter)
-fh.setFormatter(formatter)
+ch.setFormatter(fmt=formatter)
+fh.setFormatter(fmt=formatter)
 
 # add ch to logger
-logger.addHandler(ch)
-logger.addHandler(fh)
+logger.addHandler(hdlr=ch)
+logger.addHandler(hdlr=fh)
 
 
 # 'application' code
